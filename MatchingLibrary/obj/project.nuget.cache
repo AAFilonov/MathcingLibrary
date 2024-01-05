@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "GRwLSupUb5h8gESskBch5E/XYGtFjyeJXcyhmWI2eN7OBxfMPiU8HEB9uAhvrCJZvODzNs+/OrG27FX4yNzxlw==",
+  "dgSpecHash": "VcwcW86XObgbW914Ke9m6QjR6B39111mqV/K3v160pOpZ1ZiS+Fk19yLAuZQ4j4NArEKXQWfZDkroiemv/pDfQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\filon\\RiderProjects\\MathcingLibrary\\MatchingLibrary\\MatchingLibrary.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\filon\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\filon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\filon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -8,7 +8,7 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReleaseNotes>
-            1.0.0 - initial release as nuget package
+            2.0.0 - ingeriatege
         </PackageReleaseNotes>
     </PropertyGroup>
 
@@ -17,7 +17,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="src" />
+      <Folder Include="src\v1" />
+      <Folder Include="src\v1\Allocated\inerface" />
     </ItemGroup>
     
 </Project>

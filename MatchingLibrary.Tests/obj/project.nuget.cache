@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ly6BXOG5bHAzjZMqbqVqzCuH41zO0/2nFTGHiWbP9bQhAtRBzCy1VcItW9vfRs89CY6En+lbccvOZqd1VnPKxw==",
+  "dgSpecHash": "dd9i0HymJ6/HAnD+fKa8LcdzLUmWJRc1QTCKEmk6JG8ATCPNrnsMtGSCauiMA5Pttsc68EZ6PpmYXC0d+EcjLA==",
   "success": true,
   "projectFilePath": "C:\\Users\\filon\\RiderProjects\\MathcingLibrary\\MatchingLibrary.Tests\\MatchingLibrary.Tests.csproj",
   "expectedPackageFiles": [
@@ -58,7 +58,11 @@
     "C:\\Users\\filon\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\filon\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\filon\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\filon\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\filon\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\filon\\.nuget\\packages\\matchinglibrary\\1.0.0\\matchinglibrary.1.0.0.nupkg.sha512",
+    "C:\\Users\\filon\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\filon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\filon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
   ],
   "logs": []
 }
