@@ -8,7 +8,9 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReleaseNotes>
-            2.0.0 - ingeriatege
+            1.0.0 - базовая реализация на SetOfPairs
+            2.0.0 - реализация SMP на наследовании
+            2.1.0 - реализация HR на наследовании
         </PackageReleaseNotes>
     </PropertyGroup>
 

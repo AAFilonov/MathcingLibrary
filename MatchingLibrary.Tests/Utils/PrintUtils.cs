@@ -2,6 +2,7 @@ using System.Text;
 using MatchingLibrary.Utils;
 using MatchingLibrary.v1.Allocated.Impl;
 using MatchingLibrary.v2.Allocated;
+using MatchingLibrary.v2.Allocated.impl;
 
 namespace MatchingLibrary.Tests.Utils;
 
@@ -11,7 +12,7 @@ public class PrintUtils
     {
         return $"pair: [{tuple.Item1}:{tuple.Item2}],";
     }
-    public static string toString((ComplexOneToOneAllocated, ComplexOneToOneAllocated) tuple)
+    public static string toString((ComplexToOneAllocated, ComplexToOneAllocated) tuple)
     {
         return $"pair: [{tuple.Item1}:{tuple.Item2}],";
     }

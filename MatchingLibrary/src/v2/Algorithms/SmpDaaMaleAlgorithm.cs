@@ -4,26 +4,38 @@ using MatchingLibrary.v2.Allocation;
 namespace MatchingLibrary.v2.Algorithms;
 
 //Алгоритм отложенного принятия (DAA) ориентированный на мужчин
-public class SmpDaaMaleAlgorithm : IOneToOneAllocationAlgorithm
+public class SmpDaaMaleAlgorithm : IAllocationAlgorithm<IOneToOneAllocation>
 {
-    public void computeIteration(ISmpAllocation allocation)
+    public void computeIteration(IOneToOneAllocation allocation)
     {
-        foreach (var freeMan in allocation.getMen())
-        {
+        foreach (var freeMan in allocation.GetMen())
             if (HaveReacheblePair(freeMan))
                 findPair(allocation, freeMan);
-        }
     }
 
-    private void findPair(ISmpAllocation allocation, IOneToOneAllocated freeMan)
+    public bool isFinal(IOneToOneAllocation allocation)
     {
-        List<IOneToOneAllocated> manPreferences = freeMan.GetPreferences();
+        return !allocation
+            .GetMen()
+            .Any(HaveReacheblePair);
+    }
+
+    private void findPair(IOneToOneAllocation allocation, IToOneAllocated freeMan)
+    {
+        var manPreferences = freeMan.GetPreferences();
         if (!manPreferences.Any())
             return; //список предпочтений пуст
-        IOneToOneAllocated desiredWoman = manPreferences.First();
+        var desiredWoman = manPreferences.First();
 
         var womanPref = desiredWoman.GetPreferences();
-        var womanPair = desiredWoman.GetAssigned();
+        var womanPair = (IAllocated?) desiredWoman.GetAssigned();
+
+        if (!womanPref.Contains(freeMan))
+        {
+            freeMan.GetPreferences().Remove(desiredWoman);
+            return; //Мужчина не является допустимой парой
+        }
+
         if (womanPair == null)
         {
             freeMan.Assign(desiredWoman);
@@ -42,17 +54,11 @@ public class SmpDaaMaleAlgorithm : IOneToOneAllocationAlgorithm
             freeMan.GetPreferences().Remove(desiredWoman);
         }
     }
-    
-    public bool isFinal(ISmpAllocation allocation)
+
+    private bool HaveReacheblePair(IToOneAllocated toOneAllocated)
     {
-        return !allocation
-            .getMen()
-            .Any(HaveReacheblePair);
-    }
-    private bool HaveReacheblePair(IOneToOneAllocated oneToOneAllocated)
-    {
-        bool havePair = oneToOneAllocated.GetAssigned() != null;
-        bool canFindPair = oneToOneAllocated.GetPreferences().Any();
+        var havePair = toOneAllocated.GetAssigned() != null;
+        var canFindPair = toOneAllocated.GetPreferences().Any();
         return !havePair && canFindPair;
     }
 }
