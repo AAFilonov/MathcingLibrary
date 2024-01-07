@@ -191,7 +191,7 @@ public class HrTests
             //Студент а обратиться и получит согласие
             List<IToOneAllocated> students = new List<IToOneAllocated>()
             {
-                new ComplexToOneAllocated("a"),     new ComplexToOneAllocated("b")
+                new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b")
             };
             List<IToManyAllocated> lecturers = new List<IToManyAllocated>()
             {
@@ -214,7 +214,7 @@ public class HrTests
         }
 
         [Test]
-        public void whenQuotaIsFull_AndOneOverQuotaAndIsWorse()
+        public void whenQuotaIsFull_AndOverQuotaIsWorse()
         {
             //Студент с обратиться и будет отвергнут так как не влезет в квоту
             List<IToOneAllocated> students = new List<IToOneAllocated>()

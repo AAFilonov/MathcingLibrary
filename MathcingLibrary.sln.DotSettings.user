@@ -1,19 +1,34 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1ebaf606_002D77b3_002D43a7_002Db222_002Dda22fd45c8e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="testHRFromFile #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test.testHRFromFile&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=37d2207c_002Da15c_002D4ea0_002D8e05_002Dad9ba1935c15/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="testIsFinal_WhenListsAreEmptyAndThereAreSomePairs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v2.DaaTests+IsFinalTests.testIsFinal_WhenListsAreEmptyAndThereAreSomePairs&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=425cb149_002Dc808_002D426b_002Daf6d_002D5858b20888e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="testHRFromFile" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test.testHRFromFile&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=74ce622d_002D9802_002D4ae1_002Dab16_002D56a1c803db37/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DaaTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v2.DaaTests&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v2.HrTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bb6e7784_002D52c9_002D4667_002Da494_002D009a459ed74b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c22bb4a5_002Dc6bd_002D469a_002Db479_002D8af7e18b9802/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DaaTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v2.DaaTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v2.HrTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test.testHR&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f6403dd1_002D3ac5_002D4cf9_002D90d8_002D11b5603646fd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhenEveryoneGetFirstDesired" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
