@@ -3,7 +3,7 @@ using MatchingLibrary.v2.Allocation;
 
 namespace MatchingLibrary.v2.Algorithms;
 
-public class HrResidentAlgorithm : IAllocationAlgorithm<IOneToManyAllocation>
+public class HrResidentAllocator : IAllocator<IOneToManyAllocation>
 //TODO ограничить чтобы предпочтения резидентов были по ToManyAllocated а у госпиталей на ToOne
 {
     public void computeIteration(IOneToManyAllocation allocation)

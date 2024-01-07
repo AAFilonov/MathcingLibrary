@@ -4,7 +4,7 @@ using MatchingLibrary.v2.Allocation;
 
 namespace MatchingLibrary.v2.Algorithms;
 
-public class TwoStepAlgorythm: IAllocationAlgorithm<ITwoStepAllocation>
+public class TwoStepAllocator: IAllocator<ITwoStepAllocation>
 {
     public void  computeIteration(ITwoStepAllocation allocation)
     {

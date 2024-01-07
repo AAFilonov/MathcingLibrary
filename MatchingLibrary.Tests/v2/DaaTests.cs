@@ -10,12 +10,12 @@ namespace MatchingLibrary.Tests.v2;
 [TestFixture]
 public class DaaTests
 {
-    private SmpDaaMaleAlgorithm alg;
+    private SmpDaaMaleAllocator alg;
 
     [SetUp]
     public void Setup()
     {
-        alg = new SmpDaaMaleAlgorithm();
+        alg = new SmpDaaMaleAllocator();
     }
 
     [TestFixture]

@@ -4,7 +4,7 @@ using MatchingLibrary.v2.Allocation;
 namespace MatchingLibrary.v2.Algorithms;
 
 //Алгоритм отложенного принятия (DAA) ориентированный на мужчин
-public class SmpDaaMaleAlgorithm : IAllocationAlgorithm<IOneToOneAllocation>
+public class SmpDaaMaleAllocator : IAllocator<IOneToOneAllocation>
 {
     public void computeIteration(IOneToOneAllocation allocation)
     {

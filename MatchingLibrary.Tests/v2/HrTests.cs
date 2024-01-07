@@ -14,12 +14,12 @@ namespace MatchingLibrary.Tests.v2;
 [TestFixture]
 public class HrTests
 {
-    private HrResidentAlgorithm alg;
+    private HrResidentAllocator alg;
 
     [SetUp]
     public void Setup()
     {
-        alg = new HrResidentAlgorithm();
+        alg = new HrResidentAllocator();
     }
 
     [TestFixture]
