@@ -1,7 +1,8 @@
 using MatchingLibrary.v2.Allocated;
 using MatchingLibrary.v2.Allocation;
+using MatchingLibrary.v2.Allocators.interfaces;
 
-namespace MatchingLibrary.v2.Algorithms;
+namespace MatchingLibrary.v2.Allocators;
 
 public class HrResidentAllocator : IAllocator<IOneToManyAllocation>
 //TODO ограничить чтобы предпочтения резидентов были по ToManyAllocated а у госпиталей на ToOne

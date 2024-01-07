@@ -1,8 +1,8 @@
-using MatchingLibrary.v1.Allocation.interfaces;
 using MatchingLibrary.v2.Allocated;
 using MatchingLibrary.v2.Allocation;
+using MatchingLibrary.v2.Allocators.interfaces;
 
-namespace MatchingLibrary.v2.Algorithms;
+namespace MatchingLibrary.v2.Allocators;
 
 public class TwoStepAllocator: IAllocator<ITwoStepAllocation>
 {

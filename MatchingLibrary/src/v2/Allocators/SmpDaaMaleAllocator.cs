@@ -1,10 +1,11 @@
 using MatchingLibrary.v2.Allocated;
 using MatchingLibrary.v2.Allocation;
+using MatchingLibrary.v2.Allocators.interfaces;
 
-namespace MatchingLibrary.v2.Algorithms;
+namespace MatchingLibrary.v2.Allocators;
 
 //Алгоритм отложенного принятия (DAA) ориентированный на мужчин
-public class SmpDaaMaleAllocator : IAllocator<IOneToOneAllocation>
+public class SmpDaaMaleAllocator : IOneToOneAllocator
 {
     public void computeIteration(IOneToOneAllocation allocation)
     {

@@ -3,10 +3,10 @@ using MatchingLibrary.v1.Algorithms.impl;
 using MatchingLibrary.v1.Allocated.Impl;
 using MatchingLibrary.v1.Allocation.impl;
 using MatchingLibrary.v2;
-using MatchingLibrary.v2.Algorithms;
 using MatchingLibrary.v2.Allocated;
 using MatchingLibrary.v2.Allocated.impl;
 using MatchingLibrary.v2.Allocation;
+using MatchingLibrary.v2.Allocators;
 using NUnit.Framework;
 
 namespace MatchingLibrary.Tests.v2;

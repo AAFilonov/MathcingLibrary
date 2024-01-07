@@ -1,4 +1,4 @@
-namespace MatchingLibrary.v2.Algorithms;
+namespace MatchingLibrary.v2.Allocators.interfaces;
 
 public interface IAllocator<in TAllocation>
 {
