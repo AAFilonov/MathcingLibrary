@@ -18,7 +18,6 @@
 
     <ItemGroup>
       <Folder Include="IntegrationTests" />
-      <Folder Include="v1" />
     </ItemGroup>
 
 </Project>
