@@ -1,4 +1,6 @@
-﻿namespace MatchingLibrary.v3;
+﻿using System.Collections.Generic;
+
+namespace MatchingLibrary.v3;
 
 public enum AllocatedType
 {

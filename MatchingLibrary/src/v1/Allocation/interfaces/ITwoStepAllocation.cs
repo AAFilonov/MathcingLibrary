@@ -1,4 +1,6 @@
 
+using System.Collections.Generic;
+
 namespace MatchingLibrary.v1.Allocation.interfaces;
 
 public interface ITwoStepAllocation<S, L, P> 

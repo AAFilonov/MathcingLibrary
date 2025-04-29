@@ -18,6 +18,7 @@
 
     <ItemGroup>
         <Folder Include="IntegrationTests"/>
+        <Folder Include="obj\Debug\net6.0\" />
         <Folder Include="v1"/>
     </ItemGroup>
 

@@ -1,4 +1,6 @@
-﻿namespace MatchingLibrary.v2.Allocated;
+﻿using System.Collections.Generic;
+
+namespace MatchingLibrary.v2.Allocated;
 
 public interface IToManyAllocated : IAllocated
 {

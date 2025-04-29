@@ -1,4 +1,5 @@
-﻿using MatchingLibrary.Tests.Utils;
+﻿using System;
+using MatchingLibrary.Tests.Utils;
 using MatchingLibrary.v3;
 using MatchingLibrary.v3.exampleClasses;
 using NUnit.Framework;

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text;
 using MatchingLibrary.v3.exampleClasses;
 

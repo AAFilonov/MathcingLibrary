@@ -1,5 +1,7 @@
 
 
+using System.Collections.Generic;
+
 namespace MatchingLibrary.v1.Allocation.interfaces;
 
 //allocation for classic Hospitals Residents Problem

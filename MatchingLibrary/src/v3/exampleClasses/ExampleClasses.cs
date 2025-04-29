@@ -1,4 +1,6 @@
-﻿namespace MatchingLibrary.v3.exampleClasses;
+﻿using System.Collections.Generic;
+
+namespace MatchingLibrary.v3.exampleClasses;
 
 public class Named
 {

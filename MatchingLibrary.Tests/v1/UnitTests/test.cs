@@ -1,4 +1,6 @@
-﻿using MatchingLibrary.v1.Algorithms.impl.Smp;
+﻿using System;
+using System.Collections.Generic;
+using MatchingLibrary.v1.Algorithms.impl.Smp;
 using MatchingLibrary.v1.Allocated.Impl;
 using MatchingLibrary.v1.Allocation.impl.Smp;
 using NUnit.Framework;

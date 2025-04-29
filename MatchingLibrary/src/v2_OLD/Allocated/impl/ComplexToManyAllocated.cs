@@ -1,3 +1,5 @@
+using System;
+
 namespace MatchingLibrary.v2_OLD.Allocated.impl;
 
 public class ComplexToManyAllocated : BaseToManyAllocated, IEquatable<ComplexToOneAllocated>

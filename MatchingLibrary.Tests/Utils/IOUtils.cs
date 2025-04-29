@@ -1,4 +1,6 @@
-﻿namespace Common.Utils;
+﻿using System.IO;
+
+namespace Common.Utils;
 
 public static class IoUtils
 {

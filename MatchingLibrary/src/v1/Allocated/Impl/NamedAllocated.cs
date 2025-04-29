@@ -1,3 +1,5 @@
+using System;
+
 namespace MatchingLibrary.v1.Allocated.Impl;
 
 public class NamedAllocated : IEquatable<NamedAllocated>

@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace MatchingLibrary.v2.Utils;
 
 public class SetOfPairs<K, V>

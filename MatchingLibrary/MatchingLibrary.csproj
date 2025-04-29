@@ -19,6 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="obj\Debug\net6.0\" />
       <Folder Include="src\v1" />
       <Folder Include="src\v1\Allocated\inerface" />
     </ItemGroup>

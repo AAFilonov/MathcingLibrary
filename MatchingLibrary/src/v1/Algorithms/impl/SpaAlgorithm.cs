@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using MatchingLibrary.v1.Algorithms.interfaces;
 using MatchingLibrary.v1.Allocation.interfaces;
 

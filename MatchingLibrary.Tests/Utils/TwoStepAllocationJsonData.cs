@@ -1,4 +1,5 @@
-﻿using MatchingLibrary.v2.Allocated.impl;
+﻿using System.Collections.Generic;
+using MatchingLibrary.v2.Allocated.impl;
 using MatchingLibrary.v2.Allocation;
 
 namespace MatchingLibrary.Tests.Utils;

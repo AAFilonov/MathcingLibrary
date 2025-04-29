@@ -1,3 +1,5 @@
+using System;
+
 namespace MatchingLibrary.v2.Allocated.impl;
 
 public class ComplexTwoStepAllocated : BaseTwoStepAllocated, IEquatable<ComplexTwoStepAllocated>

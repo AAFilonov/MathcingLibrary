@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using MatchingLibrary.Utils;
 using MatchingLibrary.v1.Allocation.interfaces;
 

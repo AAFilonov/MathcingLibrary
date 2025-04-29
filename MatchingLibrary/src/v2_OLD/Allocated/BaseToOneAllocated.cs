@@ -1,4 +1,6 @@
-﻿namespace MatchingLibrary.v2_OLD.Allocated;
+﻿using System.Collections.Generic;
+
+namespace MatchingLibrary.v2_OLD.Allocated;
 
 public class BaseToOneAllocated : IToOneAllocated
 {

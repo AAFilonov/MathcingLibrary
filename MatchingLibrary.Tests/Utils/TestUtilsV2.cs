@@ -1,4 +1,6 @@
-﻿using MatchingLibrary.v2.Allocation;
+﻿using System.Collections.Generic;
+using System.Linq;
+using MatchingLibrary.v2.Allocation;
 
 namespace MatchingLibrary.Tests.Utils;
 

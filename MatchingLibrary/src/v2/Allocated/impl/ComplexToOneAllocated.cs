@@ -1,4 +1,6 @@
-﻿namespace MatchingLibrary.v2.Allocated.impl;
+﻿using System;
+
+namespace MatchingLibrary.v2.Allocated.impl;
 
 public class ComplexToOneAllocated : BaseToOneAllocated, IEquatable<ComplexToOneAllocated>
 {
