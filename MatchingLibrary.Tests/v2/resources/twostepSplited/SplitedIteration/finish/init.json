@@ -1,0 +1,66 @@
+{
+  "students": [
+    {
+      "name": "s1"
+    },
+    {
+      "name": "s2"
+    },
+    {
+      "name": "s3"
+    },
+    {
+      "name": "s4"
+    }
+  ],
+  "lecturers": [
+    {
+      "capacity": 2,
+      "name": "L1"
+    }
+  ],
+  "projects": [
+    {
+      "capacity": 1,
+      "name": "p1"
+    },
+    {
+      "capacity": 1,
+      "name": "p2"
+    },
+    {
+      "capacity": 1,
+      "name": "p3"
+    }
+  ],
+  "lecturersToProjects": {
+    "L1": [
+      "p1",
+      "p2",
+      "p3"
+    ]
+  },
+  "lecturersPreferencesToStudents": {
+    "L1": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ]
+  },
+  "studentsPreferencesToProjects": {
+    "s1": [
+      "p1"
+    ],
+    "s2": [
+      "p1",
+      "p2"
+    ],
+    "s3": [
+      "p2"
+    ],
+    "s4": [
+      "p3"
+    ]
+  }
+}

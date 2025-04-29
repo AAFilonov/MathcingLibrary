@@ -1,0 +1,29 @@
+{
+  "students": [
+    {
+      "name": "s1"
+    }
+  ],
+  "lecturers": [
+    {
+      "capacity": 2,
+      "name": "L1"
+    }
+  ],
+  "projects": [
+    {
+      "capacity": 1,
+      "name": "p1"
+    },
+    {
+      "capacity": 2,
+      "name": "p2"
+    }
+  ],
+  "lecturersToProjects": {
+    "L1": [
+      "p1",
+      "p2"
+    ]
+  }
+}

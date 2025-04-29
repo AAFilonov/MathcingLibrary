@@ -9,22 +9,9 @@ public class AllocationUtils
         a.Assign(b);
         b.Assign(a);
     }
-
-    public static void breakAssignment(IToOneAllocated a, IToOneAllocated b)
+    public static void breakAssignment(IAllocated a, IAllocated b)
     {
-        a.Assign(null);
-        b.Assign(null);
-    }
-
-    public static void breakAssignment(IToManyAllocated a, IToOneAllocated b)
-    {
-        a.GetAssigned().Remove(b);
-        b.Assign(null);
-    }
-
-    private static void breakAssignment(IToManyAllocated a, IToManyAllocated b)
-    {
-        a.GetAssigned().Remove(b);
-        b.GetAssigned().Remove(a);
+        a.breakAssigment(b);
+        b.breakAssigment(a);
     }
 }

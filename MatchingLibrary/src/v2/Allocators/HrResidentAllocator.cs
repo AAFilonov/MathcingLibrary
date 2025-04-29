@@ -5,7 +5,6 @@ using MatchingLibrary.v2.Allocators.interfaces;
 namespace MatchingLibrary.v2.Allocators;
 
 public class HrResidentAllocator : IAllocator<IOneToManyAllocation>
-//TODO ограничить чтобы предпочтения резидентов были по ToManyAllocated а у госпиталей на ToOne
 {
     public void computeIteration(IOneToManyAllocation allocation)
     {
@@ -41,6 +40,7 @@ public class HrResidentAllocator : IAllocator<IOneToManyAllocation>
         {
             var worstAssignedStudent = findWorstAssignedStudent(hospital, allocation);
             AllocationUtils.breakAssignment(hospital, worstAssignedStudent);
+            worstAssignedStudent.GetPreferences().Remove(hospital);
         }
         else if (assignedResidents.Count == hospital.GetCapacity())
         {

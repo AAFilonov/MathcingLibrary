@@ -2,5 +2,5 @@
 
 public interface IDependentAllocated : IToManyAllocated
 {
-    public IAllocated? GetOwner();
+    public ITwoStepAllocated? GetOwner();
 }

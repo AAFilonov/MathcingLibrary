@@ -1,6 +1,6 @@
 namespace MatchingLibrary.v2.Allocated.impl;
 
-public class ComplexToManyAllocated : BaseToManyAllocated, IEquatable<ComplexToOneAllocated>
+public class ComplexToManyAllocated : BaseToManyAllocated, IEquatable<ComplexToManyAllocated>
 {
     public ComplexToManyAllocated(string name, int capasity = 0) : base(capasity)
     {
@@ -10,7 +10,7 @@ public class ComplexToManyAllocated : BaseToManyAllocated, IEquatable<ComplexToO
     public string name { get; set; }
 
 
-    public bool Equals(ComplexToOneAllocated? other)
+    public bool Equals(ComplexToManyAllocated? other)
     {
         return name == other.name;
     }

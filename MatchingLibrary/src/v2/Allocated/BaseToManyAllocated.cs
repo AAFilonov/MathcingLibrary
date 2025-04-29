@@ -1,16 +1,19 @@
-﻿namespace MatchingLibrary.v2.Allocated;
+﻿using Newtonsoft.Json;
+
+namespace MatchingLibrary.v2.Allocated;
 
 public class BaseToManyAllocated : IToManyAllocated
 {
     protected List<IAllocated> _assigned;
-    protected int _capacity;
+    [JsonProperty]
+    protected int capacity;
     protected List<IAllocated> _preferences;
 
     protected BaseToManyAllocated(int capacity)
     {
         _preferences = new List<IAllocated>();
         _assigned = new List<IAllocated>();
-        _capacity = capacity;
+        this.capacity = capacity;
     }
 
     public List<IAllocated> GetAssigned()
@@ -21,6 +24,11 @@ public class BaseToManyAllocated : IToManyAllocated
     public void Assign(IAllocated assigned)
     {
         _assigned.Add(assigned);
+    }
+
+    public void breakAssigment(IAllocated? assigned)
+    {
+        _assigned.Remove(assigned);
     }
 
     object? IAllocated.GetAssigned()
@@ -40,12 +48,12 @@ public class BaseToManyAllocated : IToManyAllocated
 
     public int GetCapacity()
     {
-        return _capacity;
+        return capacity;
     }
 
     public void SetCapacity(int newCapacity)
     {
-        _capacity = newCapacity;
+        capacity = newCapacity;
     }
 
 }

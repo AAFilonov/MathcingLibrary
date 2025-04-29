@@ -1,0 +1,80 @@
+{
+  "students": [
+    {
+      "name": "s1"
+    },
+    {
+      "name": "s2"
+    },
+    {
+      "name": "s3"
+    }
+  ],
+  "lecturers": [
+    {
+      "capacity": 2,
+      "name": "L1"
+    },
+    {
+      "capacity": 2,
+      "name": "L2"
+    }
+  ],
+  "projects": [
+    {
+      "capacity": 1,
+      "name": "p1"
+    },
+    {
+      "capacity": 1,
+      "name": "p2"
+    },
+    {
+      "capacity": 1,
+      "name": "p3"
+    }
+  ],
+  "lecturersToProjects": {
+    "L1": [
+      "p1",
+      "p2"
+    ],
+    "L2": [
+      "p3"
+    ]
+  },
+  "lecturersPreferencesToStudents": {
+    "L1": [
+      "s1",
+      "s3",
+      "s2"
+    ],
+    "L2": [
+      "s2",
+      "s1",
+      "s3"
+    ]
+  },
+  "studentsPreferencesToProjects": {
+    "s1": [
+      "p1"
+    ],
+    "s2": [
+      "p2"
+    ],
+    "s3": [
+      "p3"
+    ]
+  },
+  "projectAssignedToStudents": {
+    "p1": [
+      "s1"
+    ],
+    "p2": [
+      "s2"
+    ],
+    "p3": [
+      "s3"
+    ]
+  }
+}

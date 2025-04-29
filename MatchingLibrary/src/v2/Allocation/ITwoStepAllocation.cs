@@ -8,5 +8,4 @@ public interface ITwoStepAllocation
     List<IToOneAllocated> GetStudents();
     List<ITwoStepAllocated> GetLecturers();
     List<IDependentAllocated> GetProjects();
-    public List<(IAllocated?, List<IAllocated>)> GetAllocationResult();
 }

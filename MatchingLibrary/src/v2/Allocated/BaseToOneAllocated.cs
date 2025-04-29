@@ -20,6 +20,11 @@ public class BaseToOneAllocated : IToOneAllocated
         pair = newPair;
     }
 
+    public void breakAssigment(IAllocated? assigned)
+    {
+        pair = null;
+    }
+
     object? IAllocated.GetAssigned()
     {
         return GetAssigned();
