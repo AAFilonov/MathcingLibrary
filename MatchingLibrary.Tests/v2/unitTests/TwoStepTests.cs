@@ -9,7 +9,7 @@ namespace MatchingLibrary.Tests.v2.unitTests;
 
 public class TwoStepTests
 {
-    private const string TestRecourceFolder = "resources/twostep/";
+    private const string TestRecourceFolder = "v2/resources/twostep/";
     private static readonly TwoStepAllocator _allocator = new();
 
 

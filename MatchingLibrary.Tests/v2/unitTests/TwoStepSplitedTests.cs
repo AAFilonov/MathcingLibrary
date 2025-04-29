@@ -10,7 +10,7 @@ namespace MatchingLibrary.Tests.v2.unitTests;
 
 public class TwoStepSplitedTests
 {
-    private const string TestResourceFolder = "resources/twostepSplited/";
+    private const string TestResourceFolder = "v2/resources/twostepSplited/";
     private static readonly ITwoStepAllocatorSplited Allocator = new TwoStepAllocatorSplited();
 
 
