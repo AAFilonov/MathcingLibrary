@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
 namespace MatchingLibrary.Utils;
 
 public class SetOfPairs<K, V>
@@ -15,8 +12,7 @@ public class SetOfPairs<K, V>
         var result = pairs.Where(tuple => tuple.Item1.Equals(k)).ToList();
         if (result.Count <= 0)
             return null;
-        else
-            return result.First().Item2;
+        return result.First().Item2;
     }
 
     public K? getByValue(V v)
@@ -24,8 +20,7 @@ public class SetOfPairs<K, V>
         var result = pairs.Where(tuple => tuple.Item2.Equals(v)).ToList();
         if (result.Count <= 0)
             return null;
-        else
-            return result.First().Item1;
+        return result.First().Item1;
     }
 
     public List<V> getManyByKey(K k)
@@ -53,5 +48,4 @@ public class SetOfPairs<K, V>
     {
         pairs.Remove((t, u));
     }
-
 }

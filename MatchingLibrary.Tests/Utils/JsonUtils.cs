@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Common.Utils;
+namespace MatchingLibrary.Tests.Utils;
 
 public class JsonUtils
 {

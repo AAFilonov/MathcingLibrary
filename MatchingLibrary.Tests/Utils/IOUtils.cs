@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace Common.Utils;
+﻿namespace MatchingLibrary.Tests.Utils;
 
 public static class IoUtils
 {

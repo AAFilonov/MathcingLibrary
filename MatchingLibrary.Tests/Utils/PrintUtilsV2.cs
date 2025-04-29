@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MatchingLibrary.v2.Allocated;
+using MatchingLibrary.Allocated;
 
 namespace MatchingLibrary.Tests.Utils;
 
