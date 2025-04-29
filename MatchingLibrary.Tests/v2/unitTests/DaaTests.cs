@@ -202,4 +202,52 @@ public class DaaTests
             Assert.AreEqual("[a:A],[b:],[c:C],[:B],", resultString);
         }
     }
+    
+    
+    [TestFixture]
+    public class IterationsTillFinalTests : DaaTests
+    {
+        [Test]
+        public void WhenSomeStaySingle()
+        {
+            // Создаем мужчин
+            var M1 = new ComplexToOneAllocated("M1");
+            var M2 = new ComplexToOneAllocated("M2");
+            var M3 = new ComplexToOneAllocated("M3");
+            var M4 = new ComplexToOneAllocated("M4");
+
+            // Создаем женщин
+            var W1 = new ComplexToOneAllocated("W1");
+            var W2 = new ComplexToOneAllocated("W2");
+            var W3 = new ComplexToOneAllocated("W3");
+            var W4 = new ComplexToOneAllocated("W4");
+
+     
+            // Предпочтения 
+            M1.SetPreferences(new List<IAllocated> { W2 });
+            M2.SetPreferences(new List<IAllocated> {  W1, W2, W3  });
+            M3.SetPreferences(new List<IAllocated> {  W1, W2, W3  });
+  
+            W1.SetPreferences(new List<IAllocated> { M1, M2, M3 });
+            W2.SetPreferences(new List<IAllocated> { M2, M3 });
+            W3.SetPreferences(new List<IAllocated> { M1, M2, M3 });
+            
+            // Списки мужчин и женщин
+
+            var men = new List<IToOneAllocated> { M1, M2, M3 };
+            var women = new List<IToOneAllocated> { W1, W2, W3 };
+
+
+            var allocation = new OneToOneAllocation(men, women);
+            while(!_alg.isFinal(allocation))
+                _alg.computeIteration(allocation);
+
+            var result = allocation.GetAllocationResult();
+            var resultString = PrintUtilsV2.ToString2(result);
+
+            Console.WriteLine(resultString);
+            // M1 и M2 останутся не распределенными
+            Assert.AreEqual("[M1:],[M2:W1],[M3:W2],[:W3],", resultString);
+        }
+    }
 }
