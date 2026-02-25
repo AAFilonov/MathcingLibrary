@@ -9,14 +9,19 @@ using NUnit.Framework;
 namespace MatchingLibrary.Tests.unitTests;
 
 [TestFixture]
-public class HrTests
+public class HrResidentTests
 {
- 
     private HrResidentAllocator _alg = new HrResidentAllocator();
 
     [TestFixture]
-    public class IsFinalTests : HrTests
+    public class IsFinalResidentTests : HrResidentTests
     {
+        /// <summary>
+        /// Проверяется, что распределение считается финальным,
+        /// если предпочтения отсутствуют и пар нет.
+        /// Вход: 3 студента, 3 преподавателя, без предпочтений.
+        /// Ожидается: isFinal == true.
+        /// </summary>
         [Test]
         public void testIsFinal_WhenListsNotEmptyAndNoPairs()
         {
@@ -38,6 +43,12 @@ public class HrTests
             Assert.AreEqual(true, _alg.isFinal(allocation));
         }
 
+        /// <summary>
+        /// Проверяется, что алгоритм не финален,
+        /// если существуют предпочтения и возможные предложения.
+        /// Вход: студент a предпочитает A,B; A принимает a.
+        /// Ожидается: isFinal == false.
+        /// </summary>
         [Test]
         public void testIsFinal_WhenListsNotEmptyAndThereIsPreferences()
         {
@@ -53,13 +64,23 @@ public class HrTests
                 new ComplexToManyAllocated("B"),
                 new ComplexToManyAllocated("C")
             };
+            lecturers[0].SetCapacity(2);
+            lecturers[1].SetCapacity(2);
+            lecturers[2].SetCapacity(2);
 
             var allocation = new OneToManyAllocation(lecturers, students);
             students[0].SetPreferences(new List<IAllocated> { lecturers[0], lecturers[1] }); //A B
+            lecturers[0].SetPreferences(new List<IAllocated> { students[0] }); //a
 
             Assert.AreEqual(false, _alg.isFinal(allocation));
         }
 
+        /// <summary>
+        /// Проверяется, что распределение финально,
+        /// если все участники уже распределены.
+        /// Вход: каждому студенту назначен свой преподаватель.
+        /// Ожидается: isFinal == true.
+        /// </summary>
         [Test]
         public void testIsFinal_WhenListsNotEmptyAndThereAndAllPaired()
         {
@@ -90,8 +111,13 @@ public class HrTests
     }
 
     [TestFixture]
-    public class ComputeIterationTests : HrTests
+    public class ComputeIterationResidentTests : HrResidentTests
     {
+        /// <summary>
+        /// Проверяется, что студент без предпочтений остаётся нераспределён.
+        /// Вход: a без предпочтений; A без предпочтений.
+        /// Ожидается: A пусто, a не распределён.
+        /// </summary>
         [Test]
         public void WhenPreferencesOfStudentEmpty()
         {
@@ -121,6 +147,11 @@ public class HrTests
             Assert.AreEqual("[A:], [:a], ", resultString);
         }
 
+        /// <summary>
+        /// Проверяется отказ, если студент неприемлем для преподавателя.
+        /// Вход: a -> A; A не содержит a в предпочтениях.
+        /// Ожидается: A пусто, a не распределён.
+        /// </summary>
         [Test]
         public void WhenStundentIsNotAcceptable()
         {
@@ -149,6 +180,11 @@ public class HrTests
             Assert.AreEqual("[A:], [:a], ", resultString);
         }
 
+        /// <summary>
+        /// Проверяется принятие при неполной квоте.
+        /// Вход: a -> A; A предпочитает a; capacity=2.
+        /// Ожидается: A:a.
+        /// </summary>
         [Test]
         public void WhenQuotaNotFull()
         {
@@ -176,6 +212,11 @@ public class HrTests
             //Should be Aa
         }
 
+        /// <summary>
+        /// Проверяется заполнение квоты без отказов.
+        /// Вход: a,b -> A; A: a>b; capacity=2.
+        /// Ожидается: A:ab.
+        /// </summary>
         [Test]
         public void WhenQuotaIsFull()
         {
@@ -204,6 +245,11 @@ public class HrTests
             Assert.AreEqual("[A:ab], ", resultString);
         }
 
+        /// <summary>
+        /// Проверяется отказ худшего при переполнении квоты.
+        /// Вход: a,b,c -> A; A: a>b>c; capacity=2.
+        /// Ожидается: A:ab, c отклонён.
+        /// </summary>
         [Test]
         public void whenQuotaIsFull_AndOverQuotaIsWorse()
         {
@@ -232,10 +278,14 @@ public class HrTests
             Assert.AreEqual("[A:ab], [:c], ", resultString);
         }
 
+        /// <summary>
+        /// Проверяется замещение худшего более предпочтительным.
+        /// Вход: a,b,c -> A; A: c>a>b; capacity=2.
+        /// Ожидается: A:ac, b отклонён.
+        /// </summary>
         [Test]
         public void whenQuotaIsFull_AndOneOverQuotaAndIsBetter()
         {
-            //Студент с обратиться и будет отвергнут так как не влезет в квоту
             var students = new List<IToOneAllocated>
             {
                 new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c")
@@ -263,7 +313,7 @@ public class HrTests
     }
 
     [TestFixture]
-    public class AppTest : HrTests
+    public class AppResidentTest : HrResidentTests
     {
         [Test]
         public void IMMB_Example()
@@ -350,5 +400,63 @@ public class HrTests
             resultString = PrintUtilsV2.ToString(allocation.GetAllocationResult());
             Assert.AreEqual("[A:agf], [B:cd], [C:be], ", resultString);
         }
+    }
+
+    /// <summary>
+    /// Проверяется, что RGS возвращает resident-optimal стабильное распределение.
+    ///
+    /// Вход:
+    /// R1: H1 > H2
+    /// R2: H1 > H2
+    /// R3: H2 > H1
+    ///
+    /// H1 (2): R3 > R1 > R2
+    /// H2 (1): R1 > R2 > R3
+    ///
+    /// Ожидаемый результат (resident-optimal):
+    /// H1: R1 R2
+    /// H2: R3
+    /// </summary>
+    [Test]
+    public void RGS_Should_Return_ResidentOptimal_Matching()
+    {
+        var residents = new List<IToOneAllocated>
+        {
+            new ComplexToOneAllocated("R1"),
+            new ComplexToOneAllocated("R2"),
+            new ComplexToOneAllocated("R3")
+        };
+
+        var hospitals = new List<IToManyAllocated>
+        {
+            new ComplexToManyAllocated("H1"),
+            new ComplexToManyAllocated("H2")
+        };
+
+        var allocation = new OneToManyAllocation(hospitals, residents);
+
+        // Preferences of residents
+        residents[0].SetPreferences(new List<IAllocated> { hospitals[0], hospitals[1] }); // R1: H1 > H2
+        residents[1].SetPreferences(new List<IAllocated> { hospitals[0], hospitals[1] }); // R2: H1 > H2
+        residents[2].SetPreferences(new List<IAllocated> { hospitals[1], hospitals[0] }); // R3: H2 > H1
+
+        // Preferences of hospitals
+        hospitals[0].SetPreferences(new List<IAllocated>
+            { residents[2], residents[0], residents[1] }); // H1: R3 > R1 > R2
+        hospitals[1].SetPreferences(new List<IAllocated>
+            { residents[0], residents[1], residents[2] }); // H2: R1 > R2 > R3
+
+        hospitals[0].SetCapacity(2);
+        hospitals[1].SetCapacity(1);
+
+        _alg.computeIteration(allocation); // RGS implementation
+
+        var resultString = PrintUtilsV2.ToString(allocation.GetAllocationResult());
+        Console.WriteLine(resultString);
+
+        // Expected:
+        // H1: R1 R2
+        // H2: R3
+        Assert.AreEqual("[H1:R1R2], [H2:R3], ", resultString);
     }
 }

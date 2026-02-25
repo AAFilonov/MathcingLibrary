@@ -83,4 +83,7 @@ public class HrResidentAllocator : IAllocator<IOneToManyAllocation>
         var canFindPair = resident.GetPreferences().Any();
         return !havePair && canFindPair;
     }
+    
+    
+    
 }
