@@ -3,10 +3,15 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ADirectoryNotFoundException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003F924e23df4a6b53f030cb1e6fee4c90a9a488ad8fb4ffdcce41722b3bc27044_003FDirectoryNotFoundException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AEnumerable_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F73a2d3b9f5ce4407b13b60d235fd418b83508_003Fde_003Ff58b1710_003FEnumerable_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AThrowHelper_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FSourcesCache_003F198a6261cebc324728dcc4c178edc5f2894123f711722c80e8557cbfd27651_003FThrowHelper_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1ebaf606_002D77b3_002D43a7_002Db222_002Dda22fd45c8e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="testHRFromFile #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test.testHRFromFile&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1ebaf606_002D77b3_002D43a7_002Db222_002Dda22fd45c8e4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="testHRFromFile #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.unitTests.HrHospitalTests&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;ProjectFile&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:unitTests/f:HrResidentTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:unitTests/f:HrFloatTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:unitTests/f:HrHospitalsTests.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=37d2207c_002Da15c_002D4ea0_002D8e05_002Dad9ba1935c15/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="testIsFinal_WhenListsAreEmptyAndThereAreSomePairs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
@@ -23,19 +28,25 @@
     &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7921f4e1_002Ded93_002D4628_002Da18a_002Dd44ac0d9946a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="HrHospitalTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.unitTests.HrHospitalTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bb6e7784_002D52c9_002D4667_002Da494_002D009a459ed74b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.v3.Test&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c22bb4a5_002Dc6bd_002D469a_002Db479_002D8af7e18b9802/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="DaaTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Or&gt;&#xD;
-    &lt;ProjectFolder&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:v1&lt;/ProjectFolder&gt;&#xD;
-    &lt;ProjectFolder&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:v3&lt;/ProjectFolder&gt;&#xD;
-    &lt;ProjectFolder&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:v2&lt;/ProjectFolder&gt;&#xD;
-    &lt;ProjectFolder&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:v2_old&lt;/ProjectFolder&gt;&#xD;
-  &lt;/Or&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c22bb4a5_002Dc6bd_002D469a_002Db479_002D8af7e18b9802/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="DaaTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:unitTests/f:HrHospitalsTests.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f6403dd1_002D3ac5_002D4cf9_002D90d8_002D11b5603646fd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhenEveryoneGetFirstDesired" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\filon\source\MathcingLibrary\MatchingLibrary.Tests" Presentation="&amp;lt;MatchingLibrary.Tests&amp;gt;" /&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.unitTests.HrFloatTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::B431E9B7-E62F-407C-8E86-7C6D60B3162C::net6.0::MatchingLibrary.Tests.unitTests.HrHospitalTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fb6977b5_002D3b1c_002D45b4_002D8394_002D916340cd3489/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from HrHospitalsTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;B431E9B7-E62F-407C-8E86-7C6D60B3162C/d:unitTests/f:HrHospitalsTests.cs&lt;/ProjectFile&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

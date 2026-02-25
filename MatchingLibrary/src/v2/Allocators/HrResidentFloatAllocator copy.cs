@@ -29,7 +29,8 @@ public class HrResidentFloatAllocator : IAllocator<IOneToManyFloatAllocation>
     private void findPair(IOneToManyFloatAllocation allocation, IToOneAllocated resident)
     {
         var residentPreferences = resident.GetPreferences();
-        // тут  будет алгоритм китайцев
+        //TODO реализовать алгоритм
+        //TODO реализовать обратный алгоритм
     }
 
     private static void deleteSuccessors(List<IAllocated> teacherPreferences, IAllocated worstAssignedStudent)

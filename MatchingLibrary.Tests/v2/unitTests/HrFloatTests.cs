@@ -18,17 +18,9 @@ public class HrFloatTests
 
 
     [TestFixture]
-    public class AppTest : HrTests
+    public class AppTest : HrFloatTests
     {
-        public void FillPreferences(IToOneAllocated subordinate, List<IToManyFloatAllocated> leaders)
-        {
-            //Заполнить препдочтения 
-        }
-
-        public void FillPreferences(IToManyFloatAllocated leader, List<IToOneAllocated> subordinates)
-        {
-            //Заполнить препдочтения 
-        }
+     
 
         [Test]
         public void Example_1()
@@ -55,8 +47,7 @@ public class HrFloatTests
             };
 
             var allocation = new OneToManyFloatAllocation(n, m);
-            foreach (var subordinate in m) FillPreferences(subordinate, n);
-            foreach (var leader in n) FillPreferences(leader, m);
+            //TODO заполнить предпочтения 
 
             n[3].Assign(m[6]);
             n[4].Assign(m[7]);
