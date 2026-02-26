@@ -7,5 +7,6 @@ public interface IToManyFloatAllocated : IAllocated
     public void Assign(IAllocated assigned);
 
     public double GetCapacity();
+    public double GetFreeCapacity();
     public void SetCapacity(double newCapacity);
 }

@@ -18,27 +18,27 @@ public class TwoStepSplitedTests
     {
         var students = new List<IToOneAllocated>
         {
-            new ComplexToOneAllocated("s1"),
-            new ComplexToOneAllocated("s2"),
-            new ComplexToOneAllocated("s3")
+            new NamedToOneAllocated("s1"),
+            new NamedToOneAllocated("s2"),
+            new NamedToOneAllocated("s3")
         };
         var lecturers = new List<ITwoStepAllocated>
         {
-            new ComplexTwoStepAllocated("L1", 2),
-            new ComplexTwoStepAllocated("L2", 2)
+            new NamedTwostepAllocated("L1", 2),
+            new NamedTwostepAllocated("L2", 2)
         };
         var projects = new List<IDependentAllocated>
         {
-            new ComplexDependedAllocated("p1", 1),
-            new ComplexDependedAllocated("p2", 1),
-            new ComplexDependedAllocated("p3", 1)
+            new NamedDependedAllocated("p1", 1),
+            new NamedDependedAllocated("p2", 1),
+            new NamedDependedAllocated("p3", 1)
         };
 
         var data = new TwoStepAllocationJsonData
         {
-            projects = projects.Cast<ComplexDependedAllocated>().ToList(),
-            lecturers = lecturers.Cast<ComplexTwoStepAllocated>().ToList(),
-            students = students.Cast<ComplexToOneAllocated>().ToList()
+            projects = projects.Cast<NamedDependedAllocated>().ToList(),
+            lecturers = lecturers.Cast<NamedTwostepAllocated>().ToList(),
+            students = students.Cast<NamedToOneAllocated>().ToList()
         };
 
         data.lecturersToProjects.Add("L1", new List<string> { "p1", "p2" });

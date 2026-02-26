@@ -1,8 +1,8 @@
-namespace MatchingLibrary.Allocated.impl;
+﻿namespace MatchingLibrary.Allocated.impl;
 
-public class ComplexDependedAllocated : BaseDependedAllocated, IEquatable<ComplexDependedAllocated>
+public class NamedToOneAllocated : BaseToOneAllocated, IEquatable<NamedToOneAllocated>
 {
-    public ComplexDependedAllocated(string name, int capasity = 0) : base(capasity)
+    public NamedToOneAllocated(string name)
     {
         this.name = name;
     }
@@ -10,8 +10,10 @@ public class ComplexDependedAllocated : BaseDependedAllocated, IEquatable<Comple
     public string name { get; set; }
 
 
-    public bool Equals(ComplexDependedAllocated? other)
+    public bool Equals(NamedToOneAllocated? other)
     {
+        if (ReferenceEquals(null, other)) return false;
+        if (ReferenceEquals(this, other)) return true;
         return name == other.name;
     }
 
@@ -25,11 +27,11 @@ public class ComplexDependedAllocated : BaseDependedAllocated, IEquatable<Comple
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;
         if (obj.GetType() != GetType()) return false;
-        return Equals((ComplexDependedAllocated)obj);
+        return Equals((NamedToOneAllocated)obj);
     }
 
     public override int GetHashCode()
     {
-        return name.GetHashCode();
+        return HashCode.Combine(name);
     }
 }

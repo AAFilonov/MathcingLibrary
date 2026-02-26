@@ -55,6 +55,12 @@ public class BaseToManyFloatAllocated : IToManyFloatAllocated
         return capacity;
     }
 
+    public double GetFreeCapacity()
+    {
+        return GetCapacity() -
+               GetAssigned().Select(s => ((IToOneFloatAllocated)s).GetRequestedQuota()).Sum();
+    }
+
     public void SetCapacity(double newCapacity)
     {
         capacity = newCapacity;

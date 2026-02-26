@@ -26,17 +26,17 @@ public class HrFloatTests
         {
             var m = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("m1"),
-                new ComplexToOneAllocated("m2"),
-                new ComplexToOneAllocated("m3"),
-                new ComplexToOneAllocated("m4"),
-                new ComplexToOneAllocated("m5"),
-                new ComplexToOneAllocated("m6"),
-                new ComplexToOneAllocated("m7"),
-                new ComplexToOneAllocated("m8"),
-                new ComplexToOneAllocated("m9"),
-                new ComplexToOneAllocated("m10"),
-                new ComplexToOneAllocated("m11")
+                new NamedToOneAllocated("m1"),
+                new NamedToOneAllocated("m2"),
+                new NamedToOneAllocated("m3"),
+                new NamedToOneAllocated("m4"),
+                new NamedToOneAllocated("m5"),
+                new NamedToOneAllocated("m6"),
+                new NamedToOneAllocated("m7"),
+                new NamedToOneAllocated("m8"),
+                new NamedToOneAllocated("m9"),
+                new NamedToOneAllocated("m10"),
+                new NamedToOneAllocated("m11")
             };
             var n = new List<IToManyFloatAllocated>
             {
@@ -59,7 +59,7 @@ public class HrFloatTests
             var testPath = TestRecourceFolder + "Example_1";
 
             string actualJson, expectedJson;
-            var alg = new HrResidentFloatAllocator();
+            var alg = new HrFloatSubordinateAllocator();
             //Step 1
             alg.computeStep(m[1], allocation);
             actualJson = JsonUtils.ToJson(allocation.GetAllocationResult());

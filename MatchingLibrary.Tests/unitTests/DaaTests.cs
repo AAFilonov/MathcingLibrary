@@ -10,7 +10,7 @@ namespace MatchingLibrary.Tests.unitTests;
 [TestFixture]
 public class DaaTests
 {
-    private readonly SmpDaaMaleAllocator _alg = new();
+    private readonly SmpMaleAllocator _alg = new();
 
     [TestFixture]
     public class IsFinalTests : DaaTests
@@ -20,12 +20,12 @@ public class DaaTests
         {
             var men = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"),
-                new ComplexToOneAllocated("b"),
-                new ComplexToOneAllocated("c")
+                new NamedToOneAllocated("a"),
+                new NamedToOneAllocated("b"),
+                new NamedToOneAllocated("c")
             };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -42,9 +42,9 @@ public class DaaTests
         public void testIsFinal_WhenListsEmptyAndNoPairs()
         {
             var men = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c") };
+                { new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c") };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -61,9 +61,9 @@ public class DaaTests
         public void testIsFinal_WhenNoListsProvided()
         {
             var men = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c") };
+                { new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c") };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -76,9 +76,9 @@ public class DaaTests
         public void testIsFinal_WhenListsAreEmptyAndThereAreSomePairs()
         {
             var men = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c") };
+                { new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c") };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -98,9 +98,9 @@ public class DaaTests
         public void testIsFinal_WhenListsAreNotEmptyAndThereAreSomePairs()
         {
             var men = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c") };
+                { new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c") };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -118,9 +118,9 @@ public class DaaTests
         public void testIsFinal_WhenListsNotEmptyAndAllArePaired()
         {
             var men = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c") };
+                { new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c") };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -145,9 +145,9 @@ public class DaaTests
         public void WhenEveryoneGetFirstDesired()
         {
             var men = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c") };
+                { new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c") };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -175,9 +175,9 @@ public class DaaTests
         public void WhenSomeStaySingle()
         {
             var men = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c") };
+                { new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c") };
             var women = new List<IToOneAllocated>
-                { new ComplexToOneAllocated("A"), new ComplexToOneAllocated("B"), new ComplexToOneAllocated("C") };
+                { new NamedToOneAllocated("A"), new NamedToOneAllocated("B"), new NamedToOneAllocated("C") };
 
 
             var allocation = new OneToOneAllocation(men, women);
@@ -209,16 +209,16 @@ public class DaaTests
         public void WhenSomeStaySingle()
         {
             // Создаем мужчин
-            var M1 = new ComplexToOneAllocated("M1");
-            var M2 = new ComplexToOneAllocated("M2");
-            var M3 = new ComplexToOneAllocated("M3");
-            var M4 = new ComplexToOneAllocated("M4");
+            var M1 = new NamedToOneAllocated("M1");
+            var M2 = new NamedToOneAllocated("M2");
+            var M3 = new NamedToOneAllocated("M3");
+            var M4 = new NamedToOneAllocated("M4");
 
             // Создаем женщин
-            var W1 = new ComplexToOneAllocated("W1");
-            var W2 = new ComplexToOneAllocated("W2");
-            var W3 = new ComplexToOneAllocated("W3");
-            var W4 = new ComplexToOneAllocated("W4");
+            var W1 = new NamedToOneAllocated("W1");
+            var W2 = new NamedToOneAllocated("W2");
+            var W3 = new NamedToOneAllocated("W3");
+            var W4 = new NamedToOneAllocated("W4");
 
      
             // Предпочтения 

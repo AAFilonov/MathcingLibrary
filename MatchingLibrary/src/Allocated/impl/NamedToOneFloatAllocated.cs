@@ -1,16 +1,18 @@
 ﻿namespace MatchingLibrary.Allocated.impl;
 
-public class ComplexToOneAllocated : BaseToOneAllocated, IEquatable<ComplexToOneAllocated>
+public class NamedToOneFloatAllocated : BaseToOneAllocated, IEquatable<NamedToOneAllocated>
 {
-    public ComplexToOneAllocated(string name)
+    public NamedToOneFloatAllocated(string name, double quota)
     {
         this.name = name;
+        this.quota = quota;
     }
 
     public string name { get; set; }
+    public double quota { get; set; }
 
 
-    public bool Equals(ComplexToOneAllocated? other)
+    public bool Equals(NamedToOneAllocated? other)
     {
         if (ReferenceEquals(null, other)) return false;
         if (ReferenceEquals(this, other)) return true;
@@ -19,7 +21,7 @@ public class ComplexToOneAllocated : BaseToOneAllocated, IEquatable<ComplexToOne
 
     public override string ToString()
     {
-        return $"{name}";
+        return $"{name}({quota})";
     }
 
     public override bool Equals(object? obj)
@@ -27,7 +29,7 @@ public class ComplexToOneAllocated : BaseToOneAllocated, IEquatable<ComplexToOne
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;
         if (obj.GetType() != GetType()) return false;
-        return Equals((ComplexToOneAllocated)obj);
+        return Equals((NamedToOneAllocated)obj);
     }
 
     public override int GetHashCode()

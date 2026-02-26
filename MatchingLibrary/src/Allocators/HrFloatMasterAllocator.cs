@@ -4,29 +4,27 @@ using MatchingLibrary.Allocators.interfaces;
 
 namespace MatchingLibrary.Allocators;
 
-public class HrResidentFloatAllocator : IAllocator<IOneToManyFloatAllocation>
+/*
+ *Алогритм предложенный в раболте
+ * 1. Liu D. [и др.]. Task-Based Network Reconfiguration in Distributed UAV Swarms: A Bilateral Matching Approach
+ * // IEEE/ACM Transactions on Networking. 2022. № 6 (30). C. 2688–2700.
+ * Отличается от классического алгоритма Гейла-Шепли динамической кратностью связи - квоты ведущих
+ * являются вещественной величиной. 
+ * Данная реализация порождает распределение, оптимальное для ведущего актора.
+ *  */
+public class HrFloatMasterAllocator : IAllocator<IOneToManyFloatAllocation>
 {
     public void computeIteration(IOneToManyFloatAllocation allocation)
     {
-        foreach (var resident in allocation.GetResidents())
-            computeStep(resident, allocation);
+      //  foreach (var subordinate in allocation.GetSubordinates())
+     //       if (haveReachablePair(subordinate))
+     //           findPair(allocation, subordinate);
     }
-
-    public bool isFinal(IOneToManyFloatAllocation allocation)
+    
+    private void findPair(IOneToManyFloatAllocation allocation, IToOneAllocated subordinate)
     {
-        var freeStudents = allocation.GetResidents().Where(s => haveReachablePair(s));
-        return !freeStudents.Any();
-    }
-
-    public void computeStep(IToOneAllocated resident, IOneToManyFloatAllocation allocation)
-    {
-        if (haveReachablePair(resident))
-            findPair(allocation, resident);
-    }
-
-    private void findPair(IOneToManyFloatAllocation allocation, IToOneAllocated resident)
-    {
-        var residentPreferences = resident.GetPreferences();
+        var subordinatePreferences = subordinate.GetPreferences();
+        
         //TODO реализовать алгоритм
         //TODO реализовать обратный алгоритм
     }
@@ -58,10 +56,17 @@ public class HrResidentFloatAllocator : IAllocator<IOneToManyFloatAllocation>
         return worstStudent;
     }
 
-    private bool haveReachablePair(IToOneAllocated resident)
+    private bool haveReachablePair(IToOneFloatAllocated resident)
     {
         var havePair = resident.GetAssigned() != null;
         var canFindPair = resident.GetPreferences().Any();
         return !havePair && canFindPair;
     }
+    
+    public bool isFinal(IOneToManyFloatAllocation allocation)
+    {
+        var freeStudents = allocation.GetSubordinates().Where(s => haveReachablePair(s));
+        return !freeStudents.Any();
+    }
+
 }

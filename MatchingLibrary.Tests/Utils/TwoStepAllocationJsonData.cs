@@ -6,11 +6,11 @@ namespace MatchingLibrary.Tests.Utils;
 
 public class TwoStepAllocationJsonData
 {
-    public List<ComplexToOneAllocated> students { get; set; } = new();
+    public List<NamedToOneAllocated> students { get; set; } = new();
 
-    public List<ComplexTwoStepAllocated> lecturers { get; set; } = new();
+    public List<NamedTwostepAllocated> lecturers { get; set; } = new();
 
-    public List<ComplexDependedAllocated> projects { get; set; } = new();
+    public List<NamedDependedAllocated> projects { get; set; } = new();
 
     public Dictionary<string, List<string>> lecturersToProjects { get; set; } = new();
     public Dictionary<string, List<string>> lecturersPreferencesToStudents { get; set; } = new();

@@ -27,15 +27,15 @@ public class HrResidentTests
         {
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"),
-                new ComplexToOneAllocated("b"),
-                new ComplexToOneAllocated("c")
+                new NamedToOneAllocated("a"),
+                new NamedToOneAllocated("b"),
+                new NamedToOneAllocated("c")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A"),
-                new ComplexToManyAllocated("B"),
-                new ComplexToManyAllocated("C")
+                new NamedToManyAllocated("A"),
+                new NamedToManyAllocated("B"),
+                new NamedToManyAllocated("C")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -54,15 +54,15 @@ public class HrResidentTests
         {
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"),
-                new ComplexToOneAllocated("b"),
-                new ComplexToOneAllocated("c")
+                new NamedToOneAllocated("a"),
+                new NamedToOneAllocated("b"),
+                new NamedToOneAllocated("c")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A"),
-                new ComplexToManyAllocated("B"),
-                new ComplexToManyAllocated("C")
+                new NamedToManyAllocated("A"),
+                new NamedToManyAllocated("B"),
+                new NamedToManyAllocated("C")
             };
             lecturers[0].SetCapacity(2);
             lecturers[1].SetCapacity(2);
@@ -86,15 +86,15 @@ public class HrResidentTests
         {
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"),
-                new ComplexToOneAllocated("b"),
-                new ComplexToOneAllocated("c")
+                new NamedToOneAllocated("a"),
+                new NamedToOneAllocated("b"),
+                new NamedToOneAllocated("c")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A"),
-                new ComplexToManyAllocated("B"),
-                new ComplexToManyAllocated("C")
+                new NamedToManyAllocated("A"),
+                new NamedToManyAllocated("B"),
+                new NamedToManyAllocated("C")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -125,11 +125,11 @@ public class HrResidentTests
 
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a")
+                new NamedToOneAllocated("a")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A")
+                new NamedToManyAllocated("A")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -158,11 +158,11 @@ public class HrResidentTests
             //Студент а обратиться но будет отвергнут 
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a")
+                new NamedToOneAllocated("a")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A")
+                new NamedToManyAllocated("A")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -191,11 +191,11 @@ public class HrResidentTests
             //Студент а обратиться и получит согласие
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a")
+                new NamedToOneAllocated("a")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A")
+                new NamedToManyAllocated("A")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -223,11 +223,11 @@ public class HrResidentTests
             //Студент а обратиться и получит согласие
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b")
+                new NamedToOneAllocated("a"), new NamedToOneAllocated("b")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A")
+                new NamedToManyAllocated("A")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -256,11 +256,11 @@ public class HrResidentTests
             //Студент с обратиться и будет отвергнут так как не влезет в квоту
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c")
+                new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A")
+                new NamedToManyAllocated("A")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -288,11 +288,11 @@ public class HrResidentTests
         {
             var students = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"), new ComplexToOneAllocated("b"), new ComplexToOneAllocated("c")
+                new NamedToOneAllocated("a"), new NamedToOneAllocated("b"), new NamedToOneAllocated("c")
             };
             var lecturers = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A")
+                new NamedToManyAllocated("A")
             };
 
             var allocation = new OneToManyAllocation(lecturers, students);
@@ -320,19 +320,19 @@ public class HrResidentTests
         {
             var subordinates = new List<IToOneAllocated>
             {
-                new ComplexToOneAllocated("a"),
-                new ComplexToOneAllocated("b"),
-                new ComplexToOneAllocated("c"),
-                new ComplexToOneAllocated("d"),
-                new ComplexToOneAllocated("e"),
-                new ComplexToOneAllocated("f"),
-                new ComplexToOneAllocated("g")
+                new NamedToOneAllocated("a"),
+                new NamedToOneAllocated("b"),
+                new NamedToOneAllocated("c"),
+                new NamedToOneAllocated("d"),
+                new NamedToOneAllocated("e"),
+                new NamedToOneAllocated("f"),
+                new NamedToOneAllocated("g")
             };
             var leaders = new List<IToManyAllocated>
             {
-                new ComplexToManyAllocated("A", 3),
-                new ComplexToManyAllocated("B", 3),
-                new ComplexToManyAllocated("C", 2)
+                new NamedToManyAllocated("A", 3),
+                new NamedToManyAllocated("B", 3),
+                new NamedToManyAllocated("C", 2)
             };
 
             var allocation = new OneToManyAllocation(leaders, subordinates);
@@ -422,15 +422,15 @@ public class HrResidentTests
     {
         var residents = new List<IToOneAllocated>
         {
-            new ComplexToOneAllocated("R1"),
-            new ComplexToOneAllocated("R2"),
-            new ComplexToOneAllocated("R3")
+            new NamedToOneAllocated("R1"),
+            new NamedToOneAllocated("R2"),
+            new NamedToOneAllocated("R3")
         };
 
         var hospitals = new List<IToManyAllocated>
         {
-            new ComplexToManyAllocated("H1"),
-            new ComplexToManyAllocated("H2")
+            new NamedToManyAllocated("H1"),
+            new NamedToManyAllocated("H2")
         };
 
         var allocation = new OneToManyAllocation(hospitals, residents);

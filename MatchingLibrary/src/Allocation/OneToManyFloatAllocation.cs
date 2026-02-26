@@ -5,20 +5,23 @@ namespace MatchingLibrary.Allocation;
 public class OneToManyFloatAllocation : IOneToManyFloatAllocation
 {
     private readonly List<IToManyFloatAllocated> _hospitals;
-    private readonly List<IToOneAllocated> _residents;
+    private readonly List<IToOneFloatAllocated> _residents;
+    private readonly Func<IToOneFloatAllocated,IToManyFloatAllocated, double> _residentPreferenceFunc;
 
-    public OneToManyFloatAllocation(List<IToManyFloatAllocated> hospitals, List<IToOneAllocated> residents)
+    public OneToManyFloatAllocation(List<IToManyFloatAllocated> hospitals, List<IToOneFloatAllocated> residents, Func<IToOneFloatAllocated, IToManyFloatAllocated, double> residentPreferenceFunc)
     {
         _hospitals = hospitals;
         _residents = residents;
+        _residentPreferenceFunc = residentPreferenceFunc;
     }
 
-    public List<IToOneAllocated> GetResidents()
+    public List<IToOneFloatAllocated> GetSubordinates()
     {
         return _residents;
     }
+    
 
-    public List<IToManyFloatAllocated> GetHospitals()
+    public List<IToManyFloatAllocated> GetMasters()
     {
         return _hospitals;
     }
@@ -34,4 +37,13 @@ public class OneToManyFloatAllocation : IOneToManyFloatAllocation
             ));
         return result;
     }
+
+    public void refreshPreferences(IToOneFloatAllocated iToOneFloatAllocated)
+    {
+        iToOneFloatAllocated.SetPreferences(
+            GetMasters().OrderByDescending(m => _residentPreferenceFunc(iToOneFloatAllocated, m))
+                .ToList().ConvertAll<IAllocated>(m =>m));
+    }
+       
 }
+

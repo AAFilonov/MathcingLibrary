@@ -5,7 +5,7 @@ using MatchingLibrary.Allocators.interfaces;
 namespace MatchingLibrary.Allocators;
 
 //Алгоритм отложенного принятия (DAA) ориентированный на мужчин
-public class SmpDaaMaleAllocator : IOneToOneAllocator
+public class SmpMaleAllocator : IOneToOneAllocator
 {
     public void computeIteration(IOneToOneAllocation allocation)
     {

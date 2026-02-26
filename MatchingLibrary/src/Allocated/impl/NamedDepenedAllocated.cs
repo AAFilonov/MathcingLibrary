@@ -1,8 +1,8 @@
 namespace MatchingLibrary.Allocated.impl;
 
-public class ComplexTwoStepAllocated : BaseTwoStepAllocated, IEquatable<ComplexTwoStepAllocated>
+public class NamedDependedAllocated : BaseDependedAllocated, IEquatable<NamedDependedAllocated>
 {
-    public ComplexTwoStepAllocated(string name, int capasity = 0) : base(capasity)
+    public NamedDependedAllocated(string name, int capasity = 0) : base(capasity)
     {
         this.name = name;
     }
@@ -10,7 +10,7 @@ public class ComplexTwoStepAllocated : BaseTwoStepAllocated, IEquatable<ComplexT
     public string name { get; set; }
 
 
-    public bool Equals(ComplexTwoStepAllocated? other)
+    public bool Equals(NamedDependedAllocated? other)
     {
         return name == other.name;
     }
@@ -25,7 +25,7 @@ public class ComplexTwoStepAllocated : BaseTwoStepAllocated, IEquatable<ComplexT
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;
         if (obj.GetType() != GetType()) return false;
-        return Equals((ComplexTwoStepAllocated)obj);
+        return Equals((NamedDependedAllocated)obj);
     }
 
     public override int GetHashCode()
